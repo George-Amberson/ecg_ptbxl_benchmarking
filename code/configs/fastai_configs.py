@@ -1,3 +1,6 @@
+conf_fastai_densenet = {'modelname':'fastai_densenet1d121', 'modeltype':'fastai_model', 
+    'parameters':dict()}
+
 conf_fastai_resnet1d18 = {'modelname':'fastai_resnet1d18', 'modeltype':'fastai_model', 
     'parameters':dict()}
     
