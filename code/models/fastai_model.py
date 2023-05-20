@@ -10,6 +10,7 @@ from fastai.callbacks.tracker import SaveModelCallback
 
 from pathlib import Path
 from functools import partial
+from models.densenet1d import densenet1d2, densenet1d121
 
 from models.resnet1d import resnet1d18,resnet1d34,resnet1d50,resnet1d101,resnet1d152,resnet1d_wang,resnet1d,wrn1d_22
 from models.xresnet1d import xresnet1d18,xresnet1d34,xresnet1d50,xresnet1d101,xresnet1d152,xresnet1d18_deep,xresnet1d34_deep,xresnet1d50_deep,xresnet1d18_deeper,xresnet1d34_deeper,xresnet1d50_deeper
@@ -331,6 +332,16 @@ class fastai_model(ClassificationModel):
             model = resnet1d18(num_classes=num_classes,input_channels=self.input_channels,inplanes=128,kernel_size=self.kernel_size,ps_head=self.ps_head,lin_ftrs_head=self.lin_ftrs_head)
         elif(self.name.startswith("fastai_resnet1d34")):
             model = resnet1d34(num_classes=num_classes,input_channels=self.input_channels,inplanes=128,kernel_size=self.kernel_size,ps_head=self.ps_head,lin_ftrs_head=self.lin_ftrs_head)
+        elif(self.name.startswith('fastai_densenet1d2')):
+            model = densenet1d2(num_classes=num_classes,input_channels=self.input_channels,inplanes=128,kernel_size=self.kernel_size,ps_head=self.ps_head,lin_ftrs_head=self.lin_ftrs_head)
+        elif(self.name.startswith('fastai_densenet1d121')):
+            model = densenet1d121(num_classes=num_classes,input_channels=self.input_channels,inplanes=128,kernel_size=self.kernel_size,ps_head=self.ps_head,lin_ftrs_head=self.lin_ftrs_head)
+        elif(self.name.startswith('fastai_densenet1d169')):
+            model = densenet1d169(num_classes=num_classes,input_channels=self.input_channels,inplanes=128,kernel_size=self.kernel_size,ps_head=self.ps_head,lin_ftrs_head=self.lin_ftrs_head)
+        elif(self.name.startswith('fastai_densenet1d201')):
+            model = densenet1d201(num_classes=num_classes,input_channels=self.input_channels,inplanes=128,kernel_size=self.kernel_size,ps_head=self.ps_head,lin_ftrs_head=self.lin_ftrs_head)
+        elif(self.name.startswith('fastai_densenet1d264')):
+            model = densenet1d264(num_classes=num_classes,input_channels=self.input_channels,inplanes=128,kernel_size=self.kernel_size,ps_head=self.ps_head,lin_ftrs_head=self.lin_ftrs_head)    
         elif(self.name.startswith("fastai_resnet1d50")):
             model = resnet1d50(num_classes=num_classes,input_channels=self.input_channels,inplanes=128,kernel_size=self.kernel_size,ps_head=self.ps_head,lin_ftrs_head=self.lin_ftrs_head)
         elif(self.name.startswith("fastai_resnet1d101")):
@@ -342,6 +353,9 @@ class fastai_model(ClassificationModel):
         elif(self.name.startswith("fastai_wrn1d_22")):    
             model = wrn1d_22(num_classes=num_classes,input_channels=self.input_channels,kernel_size=self.kernel_size,ps_head=self.ps_head,lin_ftrs_head=self.lin_ftrs_head)
         
+        elif(self.name.startswith('fastai_densenet2')):
+            model = densenet1d2(num_classes=num_classes,input_channels=self.input_channels,inplanes=128,kernel_size=self.kernel_size,ps_head=self.ps_head,lin_ftrs_head=self.lin_ftrs_head)
+
         #xresnet ... (order important for string capture)
         elif(self.name.startswith("fastai_xresnet1d18_deeper")):
             model = xresnet1d18_deeper(num_classes=num_classes,input_channels=self.input_channels,kernel_size=self.kernel_size,ps_head=self.ps_head,lin_ftrs_head=self.lin_ftrs_head)

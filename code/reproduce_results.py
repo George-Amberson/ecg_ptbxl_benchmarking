@@ -12,7 +12,8 @@ def main():
     outputfolder = '../output/'
 
     models = [
-       conf_fastai_densenet
+       conf_fastai_resnet1d18,
+       conf_fastai_resnet1d101
         ]
 
     ##########################################

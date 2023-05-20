@@ -1,8 +1,25 @@
-conf_fastai_densenet = {'modelname':'fastai_densenet1d121', 'modeltype':'fastai_model', 
+conf_fastai_densenet121 = {'modelname':'fastai_densenet1d121', 'modeltype':'fastai_model', 
+    'parameters':dict(epochs=10)}
+conf_fastai_densenet2_early_stop = {'modelname':'fastai_densenet1d2', 'modeltype':'fastai_model', 
+    'parameters':dict(early_stopping="valid_loss", epochs=4)}
+conf_fastai_densenet121_es = {'modelname':'fastai_densenet1d121_es12', 'modeltype':'fastai_model', 
+    'parameters':dict(epochs=12)}
+conf_fastai_densenet2_do = { 'modelname':'fastai_densenet1d2_do', 'modeltype':'fastai_model', 
+    'parameters':dict()}
+
+conf_fastai_densenet2 = { 'modelname':'fastai_densenet2', 'modeltype':'fastai_model', 
+    'parameters':dict()}
+
+
+conf_fastai_densenet169 = {'modelname':'fastai_densenet1d169', 'modeltype':'fastai_model', 
+    'parameters':dict()}
+conf_fastai_densenet201 = {'modelname':'fastai_densenet1d201', 'modeltype':'fastai_model', 
+    'parameters':dict()}
+conf_fastai_densenet264 = {'modelname':'fastai_densenet1d264', 'modeltype':'fastai_model', 
     'parameters':dict()}
 
 conf_fastai_resnet1d18 = {'modelname':'fastai_resnet1d18', 'modeltype':'fastai_model', 
-    'parameters':dict()}
+    'parameters':dict(epochs=12)}
     
 conf_fastai_resnet1d34 = {'modelname':'fastai_resnet1d34', 'modeltype':'fastai_model', 
     'parameters':dict()}
@@ -11,7 +28,7 @@ conf_fastai_resnet1d50 = {'modelname':'fastai_resnet1d50', 'modeltype':'fastai_m
     'parameters':dict()}
 
 conf_fastai_resnet1d101 = {'modelname':'fastai_resnet1d101', 'modeltype':'fastai_model', 
-    'parameters':dict()}
+    'parameters':dict(epochs=12)}
 
 conf_fastai_resnet1d152 = {'modelname':'fastai_resnet1d152', 'modeltype':'fastai_model', 
     'parameters':dict()}
