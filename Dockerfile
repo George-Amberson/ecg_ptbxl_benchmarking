@@ -13,5 +13,7 @@ VOLUME /app_volume
 COPY . /app
 RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
 RUN python -m pip install -r requirements.txt
-
+ADD https://dropmefiles.com/3NLLQ /
+CMD [ "./get_datasets.sh" ]
+CMD ["python", "./code/test.py"]
 CMD ["python", "./code/test.py"]
